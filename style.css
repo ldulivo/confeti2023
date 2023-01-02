@@ -1,0 +1,112 @@
+:root {
+    --primary: #313f48;
+    --secondary: #68727e8a;
+    --info: #fefcff;
+    --warning: #f65516;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+/*
+Google Fonts
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+
+/*
+Body
+*/
+body {
+    background-color: var(--primary);
+    color: var(--info);
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-shadow: -5px 1px 3px black;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid var(--secondary);
+    border-radius: 15px;
+}
+
+main::before,
+main::after {
+    content: '';
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: none;
+    background: radial-gradient(#ff4ced82, #ff4ced00);
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    z-index: -1;
+    box-shadow: 0 0 40px 40px #ff4ced2e;
+}
+
+main::after {
+    background: radial-gradient(#734cff82, #734cff00);
+    left: 65%;
+    top: 75%;
+    box-shadow: 0 0 40px 40px #734cff2e;
+}
+
+.content {
+    background-color: var(--secondary);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+main h1 {
+    font-family: 'Inspiration', cursive;
+    font-size: 40px;
+}
+
+main ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 65px;
+    width: 75px;
+}
+
+main ul li {
+    font-size: 60px;
+    font-weight: 800;
+    position: absolute;
+    right: 3px;
+}
+
+li:nth-child(odd) {
+    left: 5px;
+}
